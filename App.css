@@ -1,0 +1,213 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8; 
+  color: #333; 
+}
+
+/* App Container */
+.App {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f0f4f8;
+}
+
+/* Header Section */
+.header-section {
+  background-color: #1a5327; 
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.header-section h1 {
+  color: rgb(255, 255, 255);
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Flexbox Layout for Side-by-Side Sections */
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Add Dengue Data Form */
+.upload-csv-container{
+  width: 90%;
+  max-width: 35%;
+  background: #25a643c5;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 40px;
+}
+.add-dengue-container {
+  width: 100%;
+  max-width: 45%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.add-dengue .form-header {
+  font-size: 1.8em;
+  color: #1a5327; 
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.add-dengue input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 15px 0;
+  border: 2px solid #1aa6cd; 
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.add-dengue input:focus {
+  border-color: #1a5327;
+  outline: none;
+}
+
+.add-dengue button {
+  background-color: #07a2cd93; 
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.add-dengue button:hover:not(:disabled) {
+  background-color: #21a1f1; 
+}
+
+.add-dengue button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Success and Error Messages */
+.error-message, .success-message {
+  color: #333;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: #1a5327;
+}
+
+
+/* Save Button */
+.save-button {
+  background-color: #61dafb;
+  color: white;
+  padding: 16px 32px;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.save-button:hover:not(.disabled) {
+  background-color: #21a1f1;
+  transform: translateY(-3px);
+}
+
+.save-button.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-dengue-container, .upload-csv-container {
+    max-width: 90%;
+  }
+}
+/* Chart Section */
+.chart-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.chart-container canvas {
+  border: 2px solid #ddd; /* Optional: Add border around the chart */
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.filter-section label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.filter-section select {
+  padding: 8px 15px;
+  border: 2px solid #61dafb;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-section select:focus {
+  border-color: #1a5327;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
